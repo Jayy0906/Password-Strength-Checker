@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card mt-5 p-4">
+                    <h2 class="text-center">Password Strength Checker</h2>
+                    <form id="passwordForm">
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Enter Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password" placeholder="Password" required>
+                                <button type="button" class="btn btn-outline-secondary" id="togglePassword"><i class="bi bi-eye"></i></button>
+                            </div>
+                            <small id="passwordHelp" class="form-text text-muted">Password should be at least 8 characters long and contain a mix of letters, numbers, and special characters.</small>
+                        </div>
+
+                        <ul id="passwordCriteria" class="list-unstyled">
+                            <li id="length" class="text-danger">Minimum 8 characters</li>
+                            <li id="uppercase" class="text-danger">At least one uppercase letter</li>
+                            <li id="lowercase" class="text-danger">At least one lowercase letter</li>
+                            <li id="number" class="text-danger">At least one number</li>
+                            <li id="special" class="text-danger">At least one special character</li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
